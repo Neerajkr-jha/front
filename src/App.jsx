@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://forms-6kkr.onrender.com", {
+      const res = await fetch("https://forms-6kkr.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -95,7 +95,7 @@ function App() {
               <input
                 type="radio"
                 name="gender"
-                value="other"
+                value="others"
                 checked={formData.gender === "others"}
                 onChange={handleChange}
               />{" "}
