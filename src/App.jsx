@@ -95,7 +95,7 @@ function App() {
               <input
                 type="radio"
                 name="gender"
-                value="others"
+                value="other"
                 checked={formData.gender === "others"}
                 onChange={handleChange}
               />{" "}
