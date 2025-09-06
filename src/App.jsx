@@ -58,7 +58,7 @@ function App() {
 
         <button
           type="submit"
-          className="bg-white w-30 mx-21 my-7 rounded-lg outline-2"
+          className="bg-amber-500 text-white font-semibold py-2 rounded-lg shadow-md hover:bg-amber-600 transition w-full"
         >
           Login
         </button>
