@@ -13,6 +13,8 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage("");
+    setIsError(false);
 
     try {
       const res = await fetch("https://forms-6kkr.onrender.com/api/register", {
@@ -22,9 +24,16 @@ function App() {
       });
 
       const data = await res.json();
+      if (res.ok) {
+        setMessage("✅ Form submitted successfully!");
+        setIsError(false);
+      } else {
+        setMessage(data.message || "❌ Something went wrong!");
+        setIsError(true);
+      }
     } catch (err) {
       console.error(err);
-      alert("error submitting form");
+      alert("error submitting Wrong in form");
     }
   };
 
