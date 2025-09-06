@@ -6,6 +6,8 @@ function App() {
     username: "",
     password:"",
   });
+  const [message, setMessage] = useState(""); 
+  const [isError, setIsError] = useState(false); 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -33,7 +35,8 @@ function App() {
       }
     } catch (err) {
       console.error(err);
-      alert("error submitting Wrong in form");
+      setMessage("❌ Error submitting form. Please try again.");
+      setIsError(true);
     }
   };
 
@@ -71,6 +74,15 @@ function App() {
         >
           Login
         </button>
+        {message && (
+          <p
+            className={`mt-2 text-center font-medium ${
+              isError ? "text-red-600" : "text-green-600"
+            }`}
+          >
+            {message}
+          </p>
+        )}
       </form>
     </div>
   );
