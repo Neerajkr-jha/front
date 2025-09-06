@@ -52,7 +52,7 @@ function App() {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            className="border border-black-400 rounded px-2 py-1"
+            className="border border-gray-400 rounded px-2 py-2 w-full outline-none focus:outline-none focus:ring-0"
           />
         </div>
 
