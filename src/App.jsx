@@ -34,12 +34,12 @@ function App() {
     <div className="bg-amber-200 h-auto w-90 flex justify-center p-10 rounded-xl shadow-md">
       <form className="flex flex-col gap-4 w-full " onSubmit={handleSubmit}>
         <h3 className="text-black text-xl font-semibold text-center">
-          Registration Form
+          Login
         </h3>
 
         {/* Name */}
         <div className="flex flex-col">
-          <label className="mb-1">Name</label>
+          <label className="mb-1">Username</label>
           <input
             type="text"
             name="name"
