@@ -3,10 +3,8 @@ import "./App.css";
 
 function App() {
   const [formData, setFormData] = useState({
-    name: "",
-    branch: "",
-    gender: "",
-    city: "",
+    Username: "",
+    password:"",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,25 +33,24 @@ function App() {
       <form className="flex flex-col gap-4 w-full " onSubmit={handleSubmit}>
         <h3 className="text-black text-xl font-semibold text-center">Login</h3>
 
-        {/* Name */}
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           <label className="mb-1">Username</label>
           <input
             type="text"
             name="Userame"
             placeholder="Username"
-            value={formData.name}
+            value={formData.Username}
             onChange={handleChange}
             className="border border-black-400 rounded px-2 py-1"
           />
         </div>
-        <div>
+        <div className="flex flex-col w-full">
           <label className="mb-1">Password</label>
           <input
             type="password"
             name="Password"
             placeholder="Password"
-            value={formData.name}
+            value={formData.password}
             onChange={handleChange}
             className="border border-black-400 rounded px-2 py-1"
           />
