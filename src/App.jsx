@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [formData, setFormData] = useState({
-    Username: "",
+    username: "",
     password:"",
   });
   const handleChange = (e) => {
@@ -37,9 +37,9 @@ function App() {
           <label className="mb-1">Username</label>
           <input
             type="text"
-            name="Userame"
+            name="username"
             placeholder="Username"
-            value={formData.Username}
+            value={formData.username}
             onChange={handleChange}
             className="border border-black-400 rounded px-2 py-1"
           />
@@ -48,7 +48,7 @@ function App() {
           <label className="mb-1">Password</label>
           <input
             type="password"
-            name="Password"
+            name="password"
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
