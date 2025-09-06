@@ -41,7 +41,7 @@ function App() {
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
-            className="border border-black-400 rounded px-2 py-1"
+            className="border border-black-400 rounded px-2 py-1 utline-none focus:outline-none focus:ring-0 bg-white"
           />
         </div>
         <div className="flex flex-col w-full">
